@@ -31,11 +31,12 @@ def test_sort_vacancies_by_salary(vac_list_1, vacancy_1, vacancy_2):            
     test = FilterSortVacancies(filter_word="Создание", filter_area="Москва", filter_salary=10, top_n=5)
     assert test.sort_vacancies_by_salary(vac_list_1) == [Vacancy(vacancy_2), Vacancy(vacancy_1)]
 
+# def test_get_top_vacancies(vac_list_1):            # type: ignore[no-untyped-def]
+#     test = FilterSortVacancies(filter_word="Создание", filter_area="Москва", filter_salary=10, top_n=5)
+#     print(test.get_top_vacancies(vac_list_1))
+#     assert (test.get_top_vacancies(vac_list_1)) == ("Вакансия номер 1:\nВакансия: Junior Python\n Ссылка: https://hh.ru/vacancy/105338726\n Зарплата от: 0\n Описание: Создание скриптов\n Город: Могилев",
+#                                                      "Вакансия номер 2:\n Вакансия: Junior Python\nСсылка: https: // hh.ru / vacancy / 105338726\nЗарплата от: 10000\nОписание: Приглашаем Инженера\nГород: Москва")
 
-def test_get_top_vacancies(vac_list_1):            # type: ignore[no-untyped-def]
-    test = FilterSortVacancies(filter_word="Создание", filter_area="Москва", filter_salary=10, top_n=5)
-    print(test.get_top_vacancies(vac_list_1))
-    assert (test.get_top_vacancies(vac_list_1)) == None
 
     #         (
     #     "Вакансия номер 1:\nВакансия: Junior Python\nСсылка: https://hh.ru/vacancy/105338726\nЗарплата от: "

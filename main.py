@@ -32,9 +32,10 @@ def user_interaction():
     filtered_by_salary = filtered_obj.filter_by_salary(filtered_by_area)
     print(f"Отфильтровано {len(filtered_by_salary)} вакансий по зарплате\n")
     sorted_by_salary = filtered_obj.sort_vacancies_by_salary(filtered_by_salary)
+    # print(filtered_by_salary)
     top_vacancies = filtered_obj.get_top_vacancies(sorted_by_salary)
     print(f"Топ {top_n} вакансий: \n{top_vacancies}\n")
-
+    # print(top_vacancies)
 
     user_input = input("Очистить файл с вакансиями? (да / нет): ").lower()
     if user_input == "да":

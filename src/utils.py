@@ -49,6 +49,8 @@ class FilterSortVacancies:
         else:
             for i in range(len(vacancies_list)):
                 top_vacancies += f"Вакансия номер {i + 1}:\n{str(vacancies_list[i])}\n\n"
+        return top_vacancies
+        # print(top_vacancies)
 
 
     # def write_to_file_top_n_vac(self, for_write_top_n_vac_list: List) -> List:

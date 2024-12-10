@@ -22,14 +22,14 @@ class HeadHunterAPI(Parser, ABC):
         """Инициируем конструктор класса"""
         self.__url = 'https://api.hh.ru/vacancies'
         self.__headers = {'User-Agent': 'HH-User-Agent'}
-        self.params = {'text': '', 'page': 0, 'per_page': 20}
+        self.params = {'text': '', 'page': 0, 'per_page': 40}
         self.vacancies = []
         super().__init__()
 
     def load_vacancies(self, keyword: str):             # type: ignore[no-untyped-def]
         """Функция для получения вакансий по заданному слову"""
         self.params['text'] = keyword
-        while self.params.get('page') != 2:
+        while self.params.get('page') != 4:
             try:
                 response = requests.get(self.__url, headers=self.__headers, params=self.params)
             except Exception as e:
